@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "one" {
-  count                  = 4
+  count                  = 3
   ami                    = "ami-02dfbd4ff395f2a1b"
   instance_type          = "c7i-flex.large"
   key_name               = "KEY_PAIR"
@@ -14,5 +14,5 @@ resource "aws_instance" "one" {
 }
 
 variable "instance_names" {
-  default = ["jenkins_ansible", "Dev", "Test", "Monitoring server"]
+  default = ["github_actions", "Dev", "Test"]
 }
